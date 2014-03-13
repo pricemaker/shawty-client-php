@@ -1,0 +1,29 @@
+{
+    "name": "pricemaker/shawty-client",
+    "description": "Client library for the Shawty URL Shortener",
+    "keywords": ["url", "shortener"],
+    "homepage": "https://github.com/pricemaker/shawty-client-php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patrick Hindmarsh",
+            "email": "patrick@pricemaker.co.nz"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/pricemaker/shawty-client-php/issues"
+    },
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "suggest": {
+        "guzzle/http": "Guzzle HTTP Adapter",
+        "ext-curl": "Curl Extension"
+    },
+    "autoload": {
+        "psr-0": {
+            "Shawty": "src/"
+        }
+    }
+}
