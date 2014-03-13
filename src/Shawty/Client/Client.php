@@ -56,23 +56,10 @@ class Client {
             'url' => $url
         ));
 
-        print_r($response);
-
+        if(isset($response->body['url']))
+            return $response->body['url'];
+        else
+            return null;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function expand($url) {
-        $url = $this->endpoint.'/expand?'.http_build_query(array(
-            'access_token' => $this->accessToken,
-            'shortUrl'     => $url,
-        ));
-
-        $response = $this->call($url, 'GET', array(
-            'Content-Type' => 'application/json'
-        ));
-
-        return $this->extractKeyFromResponse('[data][expand][0][long_url]', $response);
-    }
 }
